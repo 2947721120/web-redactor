@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+    <div class="container h100p">
+        <div class="row h100p">
+            <div class="col-md-12 h100p">
+                <form class="form-horizontal h100p" action="" method="post">
+                    <div class="btn-group">
+                        <button data-toggle="modal" data-target="#mod1" type="button" class="btn btn-default"><i class="fa fa-font"></i></button>
+                        <button data-toggle="modal" data-target="#mod2" type="button" class="btn btn-default"><i class="fa fa-text-height"></i></button>
+                        <button data-toggle="modal" data-target="#mod3" type="button" class="btn btn-default"><i class="fa fa-align-left"></i></button>
+                        <button id="setItal" type="button" class="btn btn-default"><i class="fa fa-italic"></i></button>
+                        <button id="setBold" type="button" class="btn btn-default"><i class="fa fa-bold"></i></button>
+                        <button id="insertUl" type="button" class="btn btn-default"><i class="fa fa-list"></i></button>
+                        <button id="insertOl" type="button" class="btn btn-default"><i class="fa fa-list-ol"></i></button>
+                        <button id="underline" type="button" class="btn btn-default"><i class="fa fa-underline"></i></button>
+                        <button id="insertPh" type="button" class="btn btn-default"><i class="fa fa-paragraph"></i></button>
+                        <button data-toggle="modal" data-target="#mod4" type="button" class="btn btn-default"><i class="fa fa-picture-o"></i></button>
+                        <button data-toggle="modal" data-target="#mod5" type="button" class="btn btn-default"><i class="fa fa-link"></i></button>
+                        <button id="undo" type="button" class="btn btn-default"><i class="fa fa-arrow-left"></i></button>
+                        <button id="redo" type="button" class="btn btn-default"><i class="fa fa-arrow-right"></i></button>
+                    </div>
+
+                    <input type="hidden" id="content" name="content" value="" />
+                    <iframe id="iframe" name="iframe" class="w100p h100p"></iframe>
+
+                    <button type="submit" class="btn btn-success col-md-12">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+ 
+
+
+
+    <div class="modal fade" id="mod1" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Choose font-family</h4>
+                </div>
+                <div class="modal-body">
+                    <input id="chooseFont" type="text" class="form-control"/>
+                </div>
+                <div class="modal-footer">
+                    <button id="pickFontFamily" type="button" class="btn btn-primary">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mod2" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Choose font-size (1 - 7)</h4>
+                </div>
+                <div class="modal-body">
+                    <input id="chooseFontSize" type="text" class="form-control"/>
+                </div>
+                <div class="modal-footer">
+                    <button id="pickFontSize" type="button" class="btn btn-primary">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mod3" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Choose font-size (1 - 7)</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <button id="justifyLeft" type="button" class="btn btn-default"><i class="fa fa-align-left"></i></button>
+                    <button id="justifyCenter" type="button" class="btn btn-default"><i class="fa fa-align-center"></i></button>
+                    <button id="justifyRight" type="button" class="btn btn-default"><i class="fa fa-align-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mod4" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Choose img</h4>
+                </div>
+                <div class="modal-body">
+                    <input id="insertImageFile" type="text" class="form-control"/>
+                </div>
+                <div class="modal-footer">
+                    <button id="insertImageBtn" type="button" class="btn btn-primary">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="mod5" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Type your link</h4>
+                </div>
+                <div class="modal-body">
+                    <input id="linkPath" type="text" class="form-control"/>
+                </div>
+                <div class="modal-footer">
+                    <button id="createLink" type="button" class="btn btn-primary">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

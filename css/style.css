@@ -1,0 +1,32 @@
+@import url(fonts.css);
+* {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style-type: none; }
+
+html, body {
+  height: 100%;
+  min-width: 300px;
+  background: #c8ffce; }
+
+.vresize {
+  resize: vertical; }
+
+.dib {
+  display: inline-block; }
+
+.text-center {
+  text-align: center !important; }
+
+.h100p {
+  height: 100%; }
+
+.w100p {
+  width: 100%; }
+
+#iframe {
+  border: none; }
+
+/*# sourceMappingURL=style.css.map */

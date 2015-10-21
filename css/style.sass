@@ -1,0 +1,90 @@
+@import "fonts.css"
+
+$color1: #5b5c5a
+
+*
+  margin: 0
+  padding: 0
+
+ul
+  list-style-type: none
+
+@mixin border-radius($radius)
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
+@mixin background-size($width)
+  -o-background-size: $width
+  -webkit-background-size: $width
+  -khtml-background-size: $width
+  -moz-background-size: $width
+  background-size: $width
+
+@mixin size($width, $height: $width)
+  width: $width
+  height: $height
+
+@mixin linx($link, $hover, $active)
+  a
+    color: $link
+    &:hover
+      color: $hover
+    &:active
+      color: $active
+
+@mixin pad($pads)
+  padding: $pads
+
+@mixin mar($margs)
+  margin: $margs
+
+@mixin prefix($property, $value)
+  -webkit-#{$property}: #{$value}
+  -khtml-#{$property}: #{$value}
+  -moz-#{$property}: #{$value}
+  -ms-#{$property}: #{$value}
+  -o-#{$property}: #{$value}
+  #{$property}: #{$value}
+
+html, body
+  height: 100%
+  min-width: 300px
+  background: #c8ffce
+
+.vresize
+  resize: vertical
+
+.dib
+  display: inline-block
+
+.text-center
+  text-align: center !important
+
+.h100p
+  height: 100%
+
+.w100p
+  width: 100%
+
+#iframe
+  border: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
